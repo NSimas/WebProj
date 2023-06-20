@@ -1,0 +1,27 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.carousel-item:not(.active) {
+    display: none;
+}
+
+.carousel-control-prev-icon.bg-blue,
+.carousel-control-next-icon.bg-blue {
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(193deg) brightness(117%) contrast(119%);
+}

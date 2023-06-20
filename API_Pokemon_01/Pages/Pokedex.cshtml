@@ -1,0 +1,65 @@
+﻿@page
+@model PokedexModel
+@{
+    ViewData["Title"] = "Pokedex";
+}
+
+
+<div class="text-center">
+    <div class="card mx-auto" style="width: 18rem;">
+
+        <div class="card" style="width: 18rem;">
+
+            <h2 class="card-title">Pokedex</h2>
+
+            <div class="card-body">
+                <form method="get">
+                    <div clas>
+                    <label for="PokemonName">Nome do Pokémon:</label>
+                    </div>
+                    <br />
+                    <div>
+                    <input type="text" id="PokemonName" name="PokemonName" value="@Model.PokemonName" />
+                    </div>
+                    <br /><br />
+                    <div>
+                        <a href="#" class="btn btn-primary rounded-pill" type="submit">Pesquisar</a>
+                    </div>
+                    <br /><br />
+                </form>
+
+                @if (Model.Pokemon != null)
+                {
+                    <div class="card mx-auto" style="width: 16rem;">
+
+                        <h2 class="card-title">@Model.Pokemon.Name</h2>
+                        <br />
+                        <p>Altura: @Model.Pokemon.Height</p>
+                        <p>Peso: @Model.Pokemon.Weight</p>
+                        <p>Habilidades: @string.Join(", ", Model.Pokemon.Abilities)</p>
+                        <p>Tipos: @string.Join(", ", Model.Pokemon.Types)</p>
+
+
+                    </div>
+                }
+                else if (!string.IsNullOrEmpty(Model.PokemonName))
+                {
+                    <div>
+
+                        <p>Ops, algo deu errado ao buscar o Pokémon!</p>
+                        <form method="get">
+                            <button class="btn btn-primary btn-sm rounded-pill" type="submit">Tentar novamente</button>
+                        </form>
+
+                    </div>
+
+
+                    
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

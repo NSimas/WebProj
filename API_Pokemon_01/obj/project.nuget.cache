@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WbnYfsFGZvjonArRaHYebqMemC8UIh3zdweSdO2elUTtID59CioBdSWvf4kA68Om/Kyu8qtoArMGZDpAL2h4Qw==",
+  "success": true,
+  "projectFilePath": "D:\\Pasta_Nelia\\ConsumindoPokeAPI\\API_Pokemon_01\\API_Pokemon_01.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nelia.simas\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

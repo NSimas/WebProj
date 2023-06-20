@@ -1,0 +1,76 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Pokemon";
+}
+
+<div id="container">
+    <div class="text-center">
+        <h1 class="display-4">Pokemon</h1>
+        <p>Estamos construindo este espaço!</p>
+    </div>
+
+    <!-- #Region Carousel -->
+    <div id="carousel_01" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_01" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel_01" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel_01" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <style>
+            .carousel-img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+            }
+
+            .carousel-item:not(.active) {
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            .carousel-item.active {
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: blue;
+            }
+        </style>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://pokemon.gishan.cc/static/i/pokemon/bulbasaur.png" class="carousel-img d-block mx-auto" alt="imagem do bulbassauro" data-bs-toggle="tooltip" data-bs-placement="top" title="Bulbassauro">
+            </div>
+            <div class="carousel-item">
+                <img src="https://pokemon.gishan.cc/static/i/pokemon/charmander.png" class="carousel-img d-block mx-auto" alt="imagem do charmander" data-bs-toggle="tooltip" data-bs-placement="top" title="Charmander">
+            </div>
+            <div class="carousel-item">
+                <img src="https://pokemon.gishan.cc/static/i/pokemon/squirtle.png" class="carousel-img d-block mx-auto" alt="imagem do squirtle" data-bs-toggle="tooltip" data-bs-placement="top" title="Squirtle">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_01" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-blue" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel_01" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-blue" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <!-- #endregion -->
+
+    <div class="text-center border-primary">
+        Pesquisar pokemons na Pokedex: <br /><br />
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href="Pokedex" class="btn btn-primary rounded-pill">Pesquisar</a>
+    </div>
+    <div>
+    </div>
+</div>
